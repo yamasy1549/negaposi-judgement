@@ -53,7 +53,7 @@ client.user_timeline("yamasy1549", { count: ARGV[0] ||= 100 }).each do |tweet|
     score < 0 ? nega -= score : posi += score
     count += 1
   else
-    content = "きょうの直近#{count}ツイートにおけるやましーの\nポジティブ度は #{posi}\nネガティブ度は #{nega}\n徳は #{posi - nega}\nです。\nつよくいきよう✋"
+    content = "きょうの直近#{count}ツイートにおけるやましーの\nポジティブ度は #{posi}\nネガティブ度は #{nega}\n総合は #{posi - nega}\nです。\nつよくいきよう✋"
     puts content
     client.update content
     exit
